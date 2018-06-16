@@ -23,6 +23,20 @@ public class GoodModel {
 	
 	/**
 	 * 分类ID
+	 * 1:女装
+	 * 2:母婴
+	 * 3:美妆
+	 * 4:家居
+	 * 5:女鞋
+	 * 6:美食
+	 * 7:
+	 * 8:家用电器
+	 * 9:男装
+	 * 10:内衣
+	 * 11:箱包
+	 * 12:
+	 * 13:
+	 * 14:家装家纺
 	 */
 	private String cid ;
 	
@@ -117,6 +131,11 @@ public class GoodModel {
 	 * 淘宝客链接（需用大淘客助手转链）
 	 */
 	private String ali_click ;
+	
+	/**
+	 * 淘口令
+	 */
+	private String taoWord;
 
 	public String getGoodsID() {
 		return goodsID;
@@ -318,6 +337,27 @@ public class GoodModel {
 		this.ali_click = ali_click;
 	}
 	
+	
+
+	public String getTaoWord() {
+		return taoWord;
+	}
+
+	public void setTaoWord(String taoWord) {
+		this.taoWord = taoWord;
+	}
+
+	@Override
+	public String toString() {
+		return "GoodModel [goodsID=" + goodsID + ", title=" + title + ", d_title=" + d_title + ", pic=" + pic + ", cid="
+				+ cid + ", org_Price=" + org_Price + ", price=" + price + ", isTmall=" + isTmall + ", sales_num="
+				+ sales_num + ", dsr=" + dsr + ", sellerID=" + sellerID + ", commission_jihua=" + commission_jihua
+				+ ", commission_queqiao=" + commission_queqiao + ", jihua_link=" + jihua_link + ", introduce="
+				+ introduce + ", quan_id=" + quan_id + ", quan_price=" + quan_price + ", quan_time=" + quan_time
+				+ ", quan_surplus=" + quan_surplus + ", quan_receive=" + quan_receive + ", quan_condition="
+				+ quan_condition + ", quan_link=" + quan_link + ", quan_m_link=" + quan_m_link + ", yongjin_type="
+				+ yongjin_type + ", ali_click=" + ali_click + ", taoWord=" + taoWord + "]";
+	}
 	
 	
 

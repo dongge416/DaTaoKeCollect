@@ -5,5 +5,6 @@
 	<classpathentry kind="lib" path="D:/安装/okhttp/okhttp-3.10.0.jar"/>
 	<classpathentry kind="lib" path="D:/安装/okhttp/okio-1.14.1.jar"/>
 	<classpathentry kind="lib" path="D:/安装/taobao-sdk-java-auto_1486971200958-20180531.jar"/>
+	<classpathentry kind="lib" path="D:/安装/fastjson-1.2.47.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

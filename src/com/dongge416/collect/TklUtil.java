@@ -1,5 +1,6 @@
 package com.dongge416.collect;
 
+import com.alibaba.fastjson.JSONObject;
 import com.taobao.api.DefaultTaobaoClient;
 import com.taobao.api.TaobaoClient;
 import com.taobao.api.request.TbkTpwdCreateRequest;
@@ -25,9 +26,13 @@ public class TklUtil {
 		req.setLogo("https://uland.taobao.com/");
 		req.setExt("{}");
 		TbkTpwdCreateResponse rsp = client.execute(req);
-		System.out.println(""+rsp.getBody());
+
+		String taoWord = rsp.getData().getModel();
+		result = taoWord;
+
 		}catch(Exception e){
 			e.printStackTrace();
+			result = "";
 		}
 		return result ;
 	}
