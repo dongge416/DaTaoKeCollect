@@ -45,7 +45,7 @@ public class WeiXinApp {
         Color tagColor = new Color(254, 102, 0);
         g.setColor(tagColor);
         RoundRectangle2D rect=new RoundRectangle2D.Double(200,image.getHeight()+68,100,30,20,20);//创建矩//形对象
-        
+        //我的
         g.draw(rect);
         g.fillRoundRect((int)rect.getX(), (int)rect.getY(), 100, 30,20,20);
         g.setColor(Color.WHITE);
