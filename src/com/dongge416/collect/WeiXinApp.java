@@ -10,14 +10,20 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.List;
 
 import javax.imageio.ImageIO;
+import javax.swing.DefaultBoundedRangeModel;
 
 public class WeiXinApp {
 
 	public static void main(String[] args) throws Exception{
-		InputStream imagein = new FileInputStream("C:\\Users\\Administrator\\Desktop\\淘客数据采集工具\\1.jpg");  
-        InputStream imagein2 = new FileInputStream("C:\\Users\\Administrator\\Desktop\\淘客数据采集工具\\2.jpg");
+		
+		String rawPath = WeiXinApp.class.getResource("/").getPath();
+		rawPath = rawPath.replace("bin/", "");
+		System.out.println(rawPath);
+		InputStream imagein = new FileInputStream(rawPath+"/Raw/target.jpg");  
+        InputStream imagein2 = new FileInputStream(rawPath+"/Raw/bg.jpg");
         BufferedImage image = ImageIO.read(imagein);  
         BufferedImage image2 = ImageIO.read(imagein2);  
         Graphics2D g = (Graphics2D)image2.getGraphics();  
@@ -50,8 +56,23 @@ public class WeiXinApp {
         g.fillRoundRect((int)rect.getX(), (int)rect.getY(), 100, 30,20,20);
         g.setColor(Color.WHITE);
         g.drawString("券 30元", 215, image.getHeight()+90);
+        
+        g.setColor(Color.RED);
+        g.setFont(new Font("黑体", Font.PLAIN, 16));
+        String introduceTxt = "【独立小包随走随带】精选优质枸杞，颗粒饱满，口感回甘，小包装的，吃着也方便，史上最流弊的活动，错过绝对不再有！【赠运费险】";
+//        introduceTxt.ss
+        List<String> listIntroduce = StringUtil.getStrList(introduceTxt, 14);
+        int height = 120;
+        for (int i = 0; i < listIntroduce.size(); i++) {
+        		g.drawString(listIntroduce.get(i), 10, image.getHeight()+height);
+        		height = height+20;
+		}
+        
+//        g.drawString("", 10, image.getHeight()+130);
+        
+        
         g.dispose();
-        OutputStream outImage = new FileOutputStream("C:\\Users\\Administrator\\Desktop\\淘客数据采集工具\\3.jpg");  
+        OutputStream outImage = new FileOutputStream(rawPath+"Raw/result.jpg");  
         ImageIO.write(image2, "jpeg", outImage);
 //        JPEGImageEncoder enc = JPEGCodec.createJPEGEncoder(outImage);  
 //        enc.encode(image);  
