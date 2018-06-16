@@ -24,11 +24,14 @@ public class WeiXinApp {
 		System.out.println(rawPath);
 		InputStream imagein = new FileInputStream(rawPath+"/Raw/target.jpg");  
         InputStream imagein2 = new FileInputStream(rawPath+"/Raw/bg.jpg");
+        InputStream imageInQrcode = new FileInputStream(rawPath+"/Raw/qrcode.jpg");
         BufferedImage image = ImageIO.read(imagein);  
         BufferedImage image2 = ImageIO.read(imagein2);  
+        BufferedImage imageQrcode = ImageIO.read(imageInQrcode);  
         Graphics2D g = (Graphics2D)image2.getGraphics();  
         g.drawImage(image, 0, 0,  
         		image.getWidth() , image.getHeight() , null);  
+        g.drawImage(imageQrcode, image2.getWidth()-160, image.getHeight()+20, 150, 150, null); 
 //        g.setRenderingHint(hintKey, hintValue);
         Font fontTitle = new Font("黑体",Font.PLAIN,20);
         g.setFont(fontTitle); 
