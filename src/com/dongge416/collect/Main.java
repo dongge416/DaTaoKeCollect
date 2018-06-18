@@ -183,96 +183,45 @@ public class Main {
 					       
 						}
 						
+						for (int i = 0; i < goodsList.size(); i++) {
+							boolean flag = PosterUtil.creatPoster(goodsList.get(i));
+							System.out.println((i+1)+":"+flag);
+						}
 						
-//						List<GoodModel> nvZhuangList = sortGoodsByPid("1");
-//						System.out.println("筛选出女装宝贝:"+nvZhuangList.size()+"条");
-//						for (int i = 0; i < nvZhuangList.size(); i++) {
-//							System.out.println(nvZhuangList.get(i).getTitle());
+						
+//						int productSize = goodsList.size();
+//						int index = productSize % 2; 
+//						if(index!=0) {
+//							goodsList.remove(productSize-1);						
+//							productSize = goodsList.size();
 //						}
-//						List<GoodModel> meiZhuangList = sortGoodsByPid("3");
-//						System.out.println("筛选出美装宝贝:"+meiZhuangList.size()+"条");
-//						for (int i = 0; i < meiZhuangList.size(); i++) {
-//							System.out.println(meiZhuangList.get(i).getTitle());
+//						int resultIndex = productSize / 2;
+//						
+//						List<String> list = new ArrayList<>();
+//						for (int i = 0; i < productSize; i++) {
+//							String productDiv = HtmlUtil.creatDiv(goodsList.get(i));
+//							list.add(productDiv);
 //						}
-//						List<GoodModel> meiShiList = sortGoodsByPid("6");
-//						System.out.println("筛选出美食宝贝:"+meiShiList.size()+"条");
-//						for (int i = 0; i < meiShiList.size(); i++) {
-//							System.out.println(meiShiList.get(i).getTitle());
+//						System.out.println("goodsList长度:"+goodsList.size());
+//						System.out.println("list长度:"+list.size());
+//						System.out.println("==="+(resultIndex-1));
+//						list.add((resultIndex),"</div><div class=\"main-right\">\n");
+//						
+//						list.add(0,"<div class=\"main-left\">\n");
+//						list.add((list.size()),"</div>\n");
+//						for (int i = 0; i < list.size(); i++) {
+//							System.out.println("----------"+i+"-------------");
+//							System.out.println(list.get(i));
 //						}
 //						
-//						System.out.println("筛选剩下的宝贝:"+goodsList.size()+"条");
-//						for (int i = 0; i < goodsList.size(); i++) {
-//							System.out.println(goodsList.get(i).getTitle());
+//						StringBuffer sbContent = new StringBuffer();
+//						
+//						for (int i = 0; i < list.size(); i++) {
+//							sbContent.append(list.get(i));
 //						}
-						
-						int productSize = goodsList.size();
-						int index = productSize % 2; 
-						if(index!=0) {
-							goodsList.remove(productSize-1);						
-							productSize = goodsList.size();
-						}
-						int resultIndex = productSize / 2;
-						
-						List<String> list = new ArrayList<>();
-						for (int i = 0; i < productSize; i++) {
-							String productDiv = HtmlUtil.creatDiv(goodsList.get(i));
-							list.add(productDiv);
-						}
-						System.out.println("goodsList长度:"+goodsList.size());
-						System.out.println("list长度:"+list.size());
-						System.out.println("==="+(resultIndex-1));
-						list.add((resultIndex),"</div><div class=\"main-right\">\n");
-						
-						list.add(0,"<div class=\"main-left\">\n");
-						list.add((list.size()),"</div>\n");
-						for (int i = 0; i < list.size(); i++) {
-							System.out.println("----------"+i+"-------------");
-							System.out.println(list.get(i));
-						}
-						
-//						if(index==0) {
-//							list.add((productSize-1),"</div>\n");
-//							list.add((resultIndex-1),"</div><div class=\"main-right\">\n");
-//							
-//						}else {
-//							list.add((productSize-1),"</div>\n");
-//							list.add((resultIndex),"</div><div class=\"main-right\">\n");
-//							
-//						}
-//						list.add(0,"<div class=\"main-left\">\n");
-						StringBuffer sbContent = new StringBuffer();
-						
-						for (int i = 0; i < list.size(); i++) {
-							sbContent.append(list.get(i));
-						}
-						
-						
-						
-//						StringBuffer sb = new StringBuffer();
-//						if(index==0) {
-//							for (int i = 0; i < productSize; i++) {
-//								if(i==0) {
-//									sb.append("<div class=\"main-left\">");
-//									String productDiv = HtmlUtil.creatDiv(goodsList.get(i));
-//									sb.append(productDiv);
-//								}else if(i==resultIndex-1) {
-//									String productDiv = HtmlUtil.creatDiv(goodsList.get(i));
-//									sb.append(productDiv);
-//									sb.append("</div>");
-//									sb.append("<div class=\"main-right\">");
-//								}else if(i==productSize-1) {
-//									sb.append("</div>");
-//								}else {
-//									String productDiv = HtmlUtil.creatDiv(goodsList.get(i));
-//									sb.append(productDiv);
-//								}
-//							}
-//						}else {
-//							
-//						}
-						
-//						System.out.println(HtmlUtil.test);
-						HtmlUtil.creatHtml("C:\\Users\\Administrator\\Desktop\\淘客数据采集工具\\tempHtml.html", HtmlUtil.header+sbContent.toString()+HtmlUtil.footer);
+//						
+//						
+//						HtmlUtil.creatHtml("C:\\Users\\Administrator\\Desktop\\淘客数据采集工具\\tempHtml.html", HtmlUtil.header+sbContent.toString()+HtmlUtil.footer);
 						
 						JOptionPane.showMessageDialog(
 		                        jf,

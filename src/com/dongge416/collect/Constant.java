@@ -29,4 +29,6 @@ public class Constant {
 	
 	public static final String HTML_PATH = "C:\\\\Users\\\\Administrator\\\\Desktop\\\\淘客数据采集工具\\index.html";
 	
+	public static final String PIC_PATH = "/Users/dongge416/Downloads/TEMP_PIC/";
+	
 }

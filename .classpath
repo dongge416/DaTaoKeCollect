@@ -6,5 +6,6 @@
 	<classpathentry kind="lib" path="/Users/dongge416/Downloads/jar包/okhttp/okhttp-3.10.0.jar"/>
 	<classpathentry kind="lib" path="/Users/dongge416/Downloads/jar包/okhttp/okio-1.14.1.jar"/>
 	<classpathentry kind="lib" path="/Users/dongge416/Downloads/sdk-java-24333767/taobao-sdk-java-auto_1486971200958-20180423.jar"/>
+	<classpathentry kind="lib" path="/Users/dongge416/Downloads/二维码/zxing/zxing3.2.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
